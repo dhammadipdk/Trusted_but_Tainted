@@ -1,14 +1,16 @@
 cff-version: 1.2.0
-
 title: "Trusted but Tainted"
-
 message: "If you use this repository, please cite our paper."
-
 authors:
-
-* family-names: Kamble
-  given-names: Dhammadip
-
+- family-names: "Kamble"
+  given-names: "Dhammadip"
+- family-names: "Patwardhan"
+  given-names: "Sushrut"
+- family-names: "Sao"
+  given-names: "Anil Kumar"
+- family-names: "Sharma"
+  given-names: "Arvind"
+- family-names: "Ramachandra"
+  given-names: "Raghavendra"
 date-released: 2026
-
 repository-code: "https://github.com/dhammadipdk/Trusted_but_Tainted"
