@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+
+title: "Trusted but Tainted"
+
+message: "If you use this repository, please cite our paper."
+
+authors:
+
+* family-names: Kamble
+  given-names: Dhammadip
+
+date-released: 2026
+
+repository-code: "https://github.com/YOUR_USERNAME/Trusted_but_Tainted"
