@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "Trusted but Tainted"
-message: "If you use this repository, please cite our paper."
+message: "If you use this repository, please cite our ICPR 2026 paper."
 authors:
 - family-names: "Kamble"
   given-names: "Dhammadip"
@@ -14,3 +14,11 @@ authors:
   given-names: "Raghavendra"
 date-released: 2026
 repository-code: "https://github.com/dhammadipdk/Trusted_but_Tainted"
+license: MIT
+keywords:
+face recognition
+morphing attack detection
+differential morphing attack detection
+adversarial perturbations
+biometric security
+ICPR 2026
