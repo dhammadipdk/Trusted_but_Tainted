@@ -1,14 +1,16 @@
-# Trusted but Tainted Enrollment
+# Trusted but Tainted
 
-Official implementation of:
+**Official implementation of:**
 
 **Trusted but Tainted: Enrolment Perturbations that Undermine Morphing Attack Detection and Face Recognition**
+
+Accepted at **ICPR 2026**.
 
 ---
 
 ## Overview
 
-This repository provides a complete pipeline for evaluating the robustness of face recognition systems against adversarial perturbations in the context of:
+This repository provides a complete pipeline for evaluating the robustness of face recognition systems against adversarial enrolment perturbations in the context of:
 
 * Differential Morphing Attack Detection (D-MAD)
 * Generalized Morph Attack Potential (GMAP)
@@ -21,6 +23,14 @@ The framework supports:
 * Delta Embedding Generation
 * D-MAD Evaluation
 * GMAP Evaluation
+
+---
+
+## Status
+
+Repository under active preparation.
+
+Code, notebooks, evaluation scripts, and reproducibility artifacts are being released.
 
 ---
 
@@ -116,7 +126,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-The notebooks were developed and tested using:
+Tested using:
 
 * Python 3.10+
 * PyTorch
@@ -129,7 +139,7 @@ The notebooks were developed and tested using:
 | Notebook                                | Description                                                    |
 | --------------------------------------- | -------------------------------------------------------------- |
 | 00_setup.ipynb                          | Environment setup, dependency installation, repository cloning |
-| 01_generate_perturbations.ipynb         | Generation of RRPR perturbations                               |
+| 01_generate_perturbations.ipynb         | Generation of adversarial enrolment perturbations              |
 | 02_morph_generation.ipynb               | Morph generation using Greedy, MIPGAN-II, and UBO              |
 | 03_embedding_and_delta_embeddings.ipynb | Embedding extraction and delta embedding generation            |
 | 04_gmap_evaluation.ipynb                | GMAP evaluation                                                |
@@ -139,24 +149,16 @@ The notebooks were developed and tested using:
 
 ## Datasets
 
-This work uses the following face datasets:
+The experiments reported in the paper were conducted using:
 
 * FERET
 * FRGC
 
-The datasets are not redistributed through this repository.
+A demonstration subset of the datasets is included in the downloadable demo inference package available under **Artifact Downloads**.
 
-Please obtain the datasets from their respective providers and place them under:
+Users interested in reproducing the full experimental pipeline may use the provided artifacts or obtain the original datasets from their respective sources.
 
-```text
-Dataset/
-```
-
-The expected dataset structure is documented in:
-
-```text
-Dataset/README.md
-```
+Please cite the original dataset publications when using this work.
 
 ---
 
@@ -170,13 +172,11 @@ The following face recognition systems are used:
 * ElasticFace
 * EdgeFace
 
-Model checkpoints are not redistributed through this repository.
+The demonstration inference package includes all model checkpoints required to execute the released notebooks.
 
-Expected model locations are documented in:
+Users may therefore run the complete demonstration pipeline directly from the downloadable artifacts without separately obtaining model checkpoints.
 
-```text
-models/README.md
-```
+Please cite the original model repositories and publications when using this work.
 
 ---
 
@@ -204,7 +204,7 @@ Execute all notebooks in order:
 
 ### Fast Reproduction
 
-Precomputed artifacts are provided to reproduce the paper tables without rerunning the complete pipeline.
+Precomputed artifacts are provided to reproduce the reported GMAP and D-MAD results without rerunning the complete pipeline.
 
 ---
 
@@ -212,7 +212,7 @@ Precomputed artifacts are provided to reproduce the paper tables without rerunni
 
 To facilitate reproducibility, precomputed artifacts are provided.
 
-### Full Evaluation Artifacts
+### Full Experimental Artifacts
 
 The following archives contain embeddings generated for the complete experimental setup:
 
@@ -232,15 +232,18 @@ A lightweight demonstration package is also provided.
 
 The package contains:
 
-* FERET subset
-* FRGC subset
+* FERET demo subset
+* FRGC demo subset
+* Face recognition checkpoints
+* External repositories
 * Generated perturbations
 * Morphs
 * Embeddings
 * Delta embeddings
-* Evaluation results
+* GMAP results
+* D-MAD results
 
-allowing users to execute the complete pipeline on a reduced benchmark.
+allowing users to execute the complete pipeline with minimal setup and without separately downloading datasets or model checkpoints.
 
 ---
 
@@ -264,34 +267,48 @@ Demo_Working_Directory.zip
 
 ---
 
+## Acknowledgements
+
+This repository builds upon the following face recognition systems:
+
+* AdaFace
+* ArcFace
+* MagFace
+* ElasticFace
+* EdgeFace
+
+and uses the following datasets:
+
+* FERET
+* FRGC
+
+The demo inference package includes the resources required to execute the released notebooks.
+
+We gratefully acknowledge the authors of the original face recognition systems, morph generation frameworks, and datasets used throughout this work.
+
+Please cite the corresponding publications and repositories when using this repository.
+
+---
+
 ## Citation
 
 If you use this repository, please cite:
 
 ```bibtex
 @inproceedings{kamble2026trusted,
-  title={Trusted but Tainted},
+  title={Trusted but Tainted: Enrolment Perturbations that Undermine Morphing Attack Detection and Face Recognition},
   author={Kamble, Dhammadip and others},
   booktitle={International Conference on Pattern Recognition (ICPR)},
   year={2026}
 }
 ```
 
-The final citation will be updated after publication.
-
-```
-
-
-
-
-## Status
-
-🚧 Repository under active preparation.
-
-Artifacts, notebooks, and reproducibility resources are being released.
+The citation entry will be updated after publication.
 
 ---
 
 ## Contact
 
 Dhammadip Kamble
+
+GitHub: https://github.com/dhammadipdk
