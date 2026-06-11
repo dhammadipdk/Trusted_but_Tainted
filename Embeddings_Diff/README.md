@@ -1,0 +1,1 @@
+Delta embedding artifact placeholder.
