@@ -232,8 +232,8 @@ A lightweight demonstration package is also provided.
 
 The package contains:
 
-* FERET demo subset
-* FRGC demo subset
+* FERET Dataset
+* FRGC Dataset
 * Face recognition checkpoints
 * External repositories
 * Generated perturbations
