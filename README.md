@@ -1,4 +1,4 @@
-# Trusted_but_Tainted
+# Trusted but Tainted Enrollment
 
 Official implementation of:
 
