@@ -15,10 +15,3 @@ authors:
 date-released: 2026
 repository-code: "https://github.com/dhammadipdk/Trusted_but_Tainted"
 license: MIT
-keywords:
-face recognition
-morphing attack detection
-differential morphing attack detection
-adversarial perturbations
-biometric security
-ICPR 2026
