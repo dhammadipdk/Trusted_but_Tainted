@@ -251,19 +251,15 @@ allowing users to execute the complete pipeline with minimal setup and without s
 
 ### Full Experimental Artifacts
 
-Embeddings.zip
+Embeddings and Delta Embeddings (Full Dataset)
 
-[Google Drive Link]
-
-Embeddings_Diff.zip
-
-[Google Drive Link]
+[GDrive](https://drive.google.com/drive/folders/1-rJkjHkLcnfSaxj7jwrMsZ01pM52K-Nl?usp=sharing)
 
 ### Demo Inference Package
 
-Demo_Working_Directory.zip
+Whole Subset Inference assets and notebooks
 
-[Google Drive Link]
+[GDrive](https://drive.google.com/drive/folders/1mhzZrRXpiKOIrTRSeU5_6lwmtxU68BHA?usp=sharing)
 
 ---
 
