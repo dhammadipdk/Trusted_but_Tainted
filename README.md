@@ -1,2 +1,24 @@
 # Trusted_but_Tainted
-Trusted but Tainted: Robust Face Recognition Perturbations Against Differential Morphing Attack Detection
+
+Official implementation of:
+
+**Trusted but Tainted: Enrolment Perturbations that Undermine Morphing Attack Detection and Face Recognition**
+
+## Status
+
+🚧 Repository under preparation.
+
+Code, notebooks, pretrained artifacts, and reproducibility resources will be released soon.
+
+## Planned Contents
+
+- Perturbation Generation
+- Morph Generation
+- Embedding Extraction
+- Delta Embedding Generation
+- D-MAD Evaluation
+- GMAP Evaluation
+
+## Contact
+
+Dhammadip Kamble
