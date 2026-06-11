@@ -208,6 +208,80 @@ Precomputed artifacts are provided to reproduce the paper tables without rerunni
 
 ---
 
+## Precomputed Artifacts
+
+To facilitate reproducibility, precomputed artifacts are provided.
+
+### Full Evaluation Artifacts
+
+The following archives contain embeddings generated for the complete experimental setup:
+
+* Embeddings.zip
+* Embeddings_Diff.zip
+
+These artifacts allow direct reproduction of:
+
+* GMAP results
+* D-MAD results
+
+without recomputing perturbations, morphs, and embeddings.
+
+### Demo Inference Package
+
+A lightweight demonstration package is also provided.
+
+The package contains:
+
+* FERET subset
+* FRGC subset
+* Generated perturbations
+* Morphs
+* Embeddings
+* Delta embeddings
+* Evaluation results
+
+allowing users to execute the complete pipeline on a reduced benchmark.
+
+---
+
+## Artifact Downloads
+
+### Full Experimental Artifacts
+
+Embeddings.zip
+
+[Google Drive Link]
+
+Embeddings_Diff.zip
+
+[Google Drive Link]
+
+### Demo Inference Package
+
+Demo_Working_Directory.zip
+
+[Google Drive Link]
+
+---
+
+## Citation
+
+If you use this repository, please cite:
+
+```bibtex
+@inproceedings{kamble2026trusted,
+  title={Trusted but Tainted},
+  author={Kamble, Dhammadip and others},
+  booktitle={International Conference on Pattern Recognition (ICPR)},
+  year={2026}
+}
+```
+
+The final citation will be updated after publication.
+
+```
+
+
 
 
 ## Status
