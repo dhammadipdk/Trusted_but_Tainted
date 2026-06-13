@@ -1,6 +1,6 @@
 # Trusted but Tainted
 
-**Official implementation of:**
+**Official implementation of**
 
 **Trusted but Tainted: Enrolment Perturbations that Undermine Morphing Attack Detection and Face Recognition**
 
@@ -10,27 +10,30 @@ Accepted at **ICPR 2026**.
 
 ## Overview
 
-This repository provides a complete pipeline for evaluating the robustness of face recognition systems against adversarial enrolment perturbations in the context of:
+Trusted but Tainted investigates adversarial enrolment perturbations that simultaneously:
 
-* Differential Morphing Attack Detection (D-MAD)
-* Generalized Morph Attack Potential (GMAP)
+* Increase Morphing Attack Potential (GMAP)
+* Undermine Differential Morphing Attack Detection (D-MAD)
 
-The framework supports:
+The repository provides a complete evaluation pipeline covering:
 
-* Perturbation Generation
+* Adversarial Perturbation Generation
 * Morph Generation
+* Face Recognition Evaluation
 * Embedding Extraction
 * Delta Embedding Generation
-* D-MAD Evaluation
 * GMAP Evaluation
+* D-MAD Evaluation
 
 ---
 
-## Status
+## Pipeline
 
-Repository under active preparation.
+<p align="center">
+  <img src="assets/ensemble_attack_pipeline.png" width="100%">
+</p>
 
-Code, notebooks, evaluation scripts, and reproducibility artifacts are being released.
+The proposed framework generates adversarial enrolment perturbations using an ensemble of face recognition systems and evaluates their impact on both morphing attack success and morphing attack detection.
 
 ---
 
@@ -63,8 +66,12 @@ Code, notebooks, evaluation scripts, and reproducibility artifacts are being rel
 
 ## Datasets
 
+Experiments are conducted using:
+
 * FERET
 * FRGC
+
+Please cite the original dataset publications when using this work.
 
 ---
 
@@ -93,24 +100,6 @@ Trusted_but_Tainted/
 
 ---
 
-## Pipeline
-
-```text
-00_setup.ipynb
-        ↓
-01_generate_perturbations.ipynb
-        ↓
-02_morph_generation.ipynb
-        ↓
-03_embedding_and_delta_embeddings.ipynb
-        ↓
-04_gmap_evaluation.ipynb
-        ↓
-05_dmad_evaluation.ipynb
-```
-
----
-
 ## Installation
 
 Clone the repository:
@@ -126,7 +115,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Tested using:
+Tested with:
 
 * Python 3.10+
 * PyTorch
@@ -136,57 +125,22 @@ Tested using:
 
 ## Notebook Overview
 
-| Notebook                                | Description                                                    |
-| --------------------------------------- | -------------------------------------------------------------- |
-| 00_setup.ipynb                          | Environment setup, dependency installation, repository cloning |
-| 01_generate_perturbations.ipynb         | Generation of adversarial enrolment perturbations              |
-| 02_morph_generation.ipynb               | Morph generation using Greedy, MIPGAN-II, and UBO              |
-| 03_embedding_and_delta_embeddings.ipynb | Embedding extraction and delta embedding generation            |
-| 04_gmap_evaluation.ipynb                | GMAP evaluation                                                |
-| 05_dmad_evaluation.ipynb                | D-MAD evaluation                                               |
-
----
-
-## Datasets
-
-The experiments reported in the paper were conducted using:
-
-* FERET
-* FRGC
-
-A demonstration subset of the datasets is included in the downloadable demo inference package available under **Artifact Downloads**.
-
-Users interested in reproducing the full experimental pipeline may use the provided artifacts or obtain the original datasets from their respective sources.
-
-Please cite the original dataset publications when using this work.
-
----
-
-## Face Recognition Systems
-
-The following face recognition systems are used:
-
-* AdaFace
-* ArcFace
-* MagFace
-* ElasticFace
-* EdgeFace
-
-The demonstration inference package includes all model checkpoints required to execute the released notebooks.
-
-Users may therefore run the complete demonstration pipeline directly from the downloadable artifacts without separately obtaining model checkpoints.
-
-Please cite the original model repositories and publications when using this work.
+| Notebook                                | Description                                         |
+| --------------------------------------- | --------------------------------------------------- |
+| 00_setup.ipynb                          | Environment setup and repository initialization     |
+| 01_generate_perturbations.ipynb         | Adversarial enrolment perturbation generation       |
+| 02_morph_generation.ipynb               | Morph generation using Greedy, MIPGAN-II, and UBO   |
+| 03_embedding_and_delta_embeddings.ipynb | Embedding extraction and delta embedding generation |
+| 04_gmap_evaluation.ipynb                | GMAP evaluation                                     |
+| 05_dmad_evaluation.ipynb                | D-MAD evaluation                                    |
 
 ---
 
 ## Reproducibility
 
-Two reproduction modes are supported.
-
 ### Full Reproduction
 
-Execute all notebooks in order:
+Execute the notebooks sequentially:
 
 ```text
 00_setup.ipynb
@@ -202,62 +156,33 @@ Execute all notebooks in order:
 05_dmad_evaluation.ipynb
 ```
 
-### Fast Reproduction
+This mode requires access to the original datasets and model checkpoints.
 
-Precomputed artifacts are provided to reproduce the reported GMAP and D-MAD results without rerunning the complete pipeline.
+### Demo Reproduction
 
----
+A self-contained Demo Inference Package is provided to allow execution of the complete pipeline on a reduced benchmark.
 
-## Precomputed Artifacts
+The package includes:
 
-To facilitate reproducibility, precomputed artifacts are provided.
-
-### Full Experimental Artifacts
-
-The following archives contain embeddings generated for the complete experimental setup:
-
-* Embeddings.zip
-* Embeddings_Diff.zip
-
-These artifacts allow direct reproduction of:
-
-* GMAP results
-* D-MAD results
-
-without recomputing perturbations, morphs, and embeddings.
-
-### Demo Inference Package
-
-A lightweight demonstration package is also provided.
-
-The package contains:
-
-* FERET Dataset
-* FRGC Dataset
+* FERET subset
+* FRGC subset
 * Face recognition checkpoints
 * External repositories
 * Generated perturbations
 * Morphs
 * Embeddings
 * Delta embeddings
-* GMAP results
-* D-MAD results
+* Evaluation assets
 
-allowing users to execute the complete pipeline with minimal setup and without separately downloading datasets or model checkpoints.
+allowing users to validate the complete workflow without additional setup.
 
 ---
 
 ## Artifact Downloads
 
-### Full Experimental Artifacts
-
-Embeddings and Delta Embeddings (Full Dataset)
-
-[GDrive](https://drive.google.com/drive/folders/1-rJkjHkLcnfSaxj7jwrMsZ01pM52K-Nl?usp=sharing)
-
 ### Demo Inference Package
 
-Whole Subset Inference assets and notebooks
+Whole subset inference assets, datasets, models, repositories, embeddings, results, and notebooks.
 
 [GDrive](https://drive.google.com/drive/folders/1mhzZrRXpiKOIrTRSeU5_6lwmtxU68BHA?usp=sharing)
 
@@ -277,8 +202,6 @@ and uses the following datasets:
 
 * FERET
 * FRGC
-
-The demo inference package includes the resources required to execute the released notebooks.
 
 We gratefully acknowledge the authors of the original face recognition systems, morph generation frameworks, and datasets used throughout this work.
 
